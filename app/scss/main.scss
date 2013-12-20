@@ -1,0 +1,59 @@
+@import '../bower_components/foundation/scss/normalize.scss';
+@import '../bower_components/foundation/scss/foundation.scss';
+@import '../bower_components/font-awesome/scss/font-awesome.scss';
+@import 'globalVariables';
+@import 'mixins';
+.row{position: relative;}
+.globalHeader{
+	height:125px;
+	background-color: $darkNeutral;
+}
+.logo{
+	display: block;
+	margin:0 auto;
+	width:500px;
+	height:75px;
+	background-image: url('../images/la_logo.png');
+
+}
+.topNav{
+	width:500px;
+	margin:0 auto;
+	ul{
+		margin:0;
+		li{
+			display: inline;
+			padding:3px;
+			a{
+				@include transition(all, 0.2s, ease-in-out);
+				color:$lightNeutral;
+				font-size:2.3rem;
+				font-family:$brandFont, $fontStack;
+				font-weight:700;
+			}
+			a:hover{color:$lokiGreen;}
+		}
+		list-style: none;
+	}
+
+}
+.heroContent{
+	background-color: $lokiGreen;
+}
+.hiddenNav{
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:0;
+	left:10px;
+	
+	.menuBtn{
+		font-size: 2rem;
+		display:block;
+		color:$darkNeutral;	
+		@include transition(all, 0.2s, ease-in-out);
+		&:hover{			
+			color:$lokiGreen;					
+		}	
+	}
+}
