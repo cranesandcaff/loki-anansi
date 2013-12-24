@@ -1,5 +1,5 @@
 {
-  "name": "meanblog",
+  "name": "lokiAnansiBlog",
   "version": "0.0.0",
   "dependencies": {
     "express": "~3.4.3",
@@ -9,7 +9,9 @@
     "passport-local" : "~0.1.6", 
     "connect-flash" : "~0.1.1",     
     "bcrypt-nodejs" : "latest",        
-    "ejs": "~0.8.4"
+    "ejs": "~0.8.4",
+    "underscore": "~1.5.2",
+    "connect-mongo": "~0.4.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

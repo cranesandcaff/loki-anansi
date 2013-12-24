@@ -7,12 +7,12 @@ var lokiAnansi =  angular.module('lokiAnansi', [
                                   'ui.router'
                                 ]);
   lokiAnansi.config(function ($stateProvider, $urlRouterProvider) {
-      $urlRouterProvider.otherwise('/home')
+      $urlRouterProvider.otherwise('/')
 
       $stateProvider
         .state('home', {
-          url         : '/home',
-          templateUrl : '../views/partials/main.html'
+          url         : '/',
+          templateUrl : 'partials/main.html'
         })
 });
 
@@ -33,6 +33,6 @@ lokiAnansi.directive('bgFull', function () {
     restrict:'AE',
     link: function (scope, element, attrs) {
               element.css({'min-height': slideheight});
-            }
-  }
+        }
+     };
 });
