@@ -1,12 +1,16 @@
 @import '../bower_components/foundation/scss/normalize.scss';
 @import '../bower_components/foundation/scss/foundation.scss';
+@import '../bower_components/sass-bootstrap/dist/css/bootstrap.css';
 @import '../bower_components/font-awesome/scss/font-awesome.scss';
 @import 'globalVariables';
 @import 'mixins';
+@import 'typography';
+@import 'forms';
 .row{position: relative;}
 .globalHeader{
 	height:125px;
-	background-color: $darkNeutral;
+	background-color: #292f36;
+	margin-bottom: 2rem;
 }
 .logo{
 	display: block;
@@ -27,7 +31,7 @@
 			a{
 				@include transition(all, 0.2s, ease-in-out);
 				color:$lightNeutral;
-				font-size:2.3rem;
+				font-size:2.1rem;
 				font-family:$brandFont, $fontStack;
 				font-weight:700;
 			}
@@ -48,9 +52,9 @@
 	left:10px;
 	
 	.menuBtn{
-		font-size: 2rem;
+		font-size: 3rem;
 		display:block;
-		color:$darkNeutral;	
+		color:#292f36;	
 		@include transition(all, 0.2s, ease-in-out);
 		&:hover{			
 			color:$lokiGreen;					

@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
     <title>MEAN Blog</title>
-    <meta name="description"dsdfgsdfgs content="">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     
@@ -27,24 +27,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <header class="globalHeader">
-      <nav class="hiddenNav">
-        <a href="" class="menuBtn"><i class="fa fa-bars"></i></a>
-      </nav>
-      <div class="row">
-        <a href="" class="logo"></a>
-        <nav class="topNav">          
-          <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Research</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+    
 
-    </header>
-    <div ui-view></div>
+    <div ng-view></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 
@@ -57,7 +42,8 @@
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+
         <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
         <script src="bower_components/angular-http-auth/src/http-auth-interceptor.js"></script>
         <!-- endbuild -->
@@ -75,6 +61,7 @@
         <script src="scripts/controllers/blogs.js"></script>
         <script src="scripts/controllers/register.js"></script>
         <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/loginModal.js"></script>
         <script src="scripts/controllers/main.js"></script>
         
         <!-- endbuild -->

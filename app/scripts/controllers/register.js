@@ -12,7 +12,7 @@ angular.module('lokiAnansi')
 				$scope.errors = {}
 				
 				if (!err){
-					$location.path('/');
+					$location.path('/success');
 				} else {
 					angular.forEach(err.errors, function(error, field){
 						form[field].$setValidity('mongoose', false);

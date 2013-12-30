@@ -3,33 +3,35 @@ var lokiAnansi =  angular.module('lokiAnansi', [
                                   'ngCookies',
                                   'ngResource',
                                   'ngSanitize',
-								  'http-auth-interceptor',
+                                  'http-auth-interceptor',
                                   'ui.bootstrap',
-                                  'ui.router'
+                                  'ngRoute'
                                 ]);
-lokiAnansi.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-      $urlRouterProvider.otherwise('/')
-
-      $stateProvider
-        .state('home', {
-			url         : '/',
-			templateUrl : 'partials/main.html',
-			controller: 'MainCtrl'
+lokiAnansi.config(function ($routeProvider, $locationProvider) {
+      $routeProvider
+        .when('/', {
+          templateUrl: 'partials/mainSite/main.html',
+          controller: 'MainCtrl'
         })
-		.state('login', {
-			url		  	: '/login',
-			templateUrl : 'partials/login.html',
-			controller	: 'loginCtrl'
-		})
-		.state('register', {
-			url			: '/register',
-			templateUrl	: 'partials/register.html',
-			controller	: 'SignupCtrl'
-		})
-		$locationProvider.html5Mode(true);
-	});
+        .when('/register', {
+          templateUrl : 'partials/register.html',
+          controller  : 'SignupCtrl'
+        })
+        .when('/blogs', {
+          templateUrl : 'partials/admin/admin.html'
+        })
+        .when('/blogs/create', {
+          templateUrl: 'partials/admin/newArticle.html'
+        })
+        .when('/blogs/:blogId', {
+          templateUrl: 'partials/admin/admin.html'
+        })
+        .otherwise({
+          redirectTo: '/'
+        });      
+    $locationProvider.html5Mode(true);
+  });
 lokiAnansi.run(function ($rootScope, $location, Auth) {
-
     //watching the value of the currentUser variable.
     $rootScope.$watch('currentUser', function(currentUser) {
       // if no currentUser and on a page that requires authorization then try to update it
