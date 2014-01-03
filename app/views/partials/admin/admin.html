@@ -5,20 +5,20 @@
   <div class="row">
     <a ui-sref="home" class="logo"></a>
     <nav class="adminNav">
-  		<a href="/blogs/create">
+  		<a href="/articles/create">
   			<i class="fa fa-plus-circle"></i> New Post
   		</a>
 	 </nav>
   </div>
 </header>
-<div class="container" ng-controller="BlogsCtrl">
+<div class="container" ng-controller="ArticleCtrl">
   <h1>{{currentUser.username}}</h1>
   <!-- Use NG include for template for Nav -->
   <section ng-init="find()">
-    <div ng-repeat="blog in blogs">
-      <h3> {{blog.title}} </h3>
-      <h4> {{blog._id}} </h4>
-      <p> {{blog.content}} </p>
+    <div ng-repeat="article in articles">
+      <h3> {{article.title}} </h3>
+      <h4> {{article.subtitle}} </h4>
+      <p> {{article.content}} </p>
     </div>
   </section>
 </div>

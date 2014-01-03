@@ -8,6 +8,7 @@ angular.module('lokiAnansi')
         title: this.title,
         content: this.content
       });
+      console.log(blog);
       blog.$save(function(response) {
         $location.path("blogs/" + response._id);
       });

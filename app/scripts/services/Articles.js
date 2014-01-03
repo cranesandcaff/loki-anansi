@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('lokiAnansi')
-	.factory('Blogs', function ($resource){
-		return $resource('api/blogs/:blogId', {
-			blogId: '@_id'
+	.factory('Articles', function ($resource){
+		return $resource('/api/articles/:articleId', {
+			articleId: '@_id'
 		}, {
 			create: {
 				method: 'POST'

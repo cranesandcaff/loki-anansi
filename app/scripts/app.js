@@ -17,14 +17,17 @@ lokiAnansi.config(function ($routeProvider, $locationProvider) {
           templateUrl : 'partials/register.html',
           controller  : 'SignupCtrl'
         })
-        .when('/blogs', {
+        .when('/articles', {
           templateUrl : 'partials/admin/admin.html'
         })
-        .when('/blogs/create', {
+        .when('/articles/create', {
           templateUrl: 'partials/admin/newArticle.html'
         })
-        .when('/blogs/:blogId', {
+        .when('/articles/:blogId', {
           templateUrl: 'partials/admin/admin.html'
+        })
+        .when('/research', {
+          templateUrl: 'partials/mainSite/research.html'
         })
         .otherwise({
           redirectTo: '/'

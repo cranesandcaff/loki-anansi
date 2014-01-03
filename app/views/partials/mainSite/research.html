@@ -1,0 +1,12 @@
+<div ng-include="'partials/mainSite/header.html'"></div>
+<div class="container" ng-controller="ArticleCtrl">
+  <h1>{{currentUser.username}}</h1>
+  <!-- Use NG include for template for Nav -->
+  <section ng-init="find()">
+    <div ng-repeat="article in articles">
+      <h3> {{article.title}} </h3>
+      <h4> {{article.subtitle}} </h4>
+      <p> {{article.content}} </p>
+    </div>
+  </section>
+</div>

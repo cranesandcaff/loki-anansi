@@ -7,7 +7,8 @@ var express = require('express'),
     path = require('path'),
     fs = require('fs'),
     mongoStore = require('connect-mongo')(express),
-    config = require('./lib/config/config');
+    config = require('./lib/config/config'),
+    auth = require('./lib/config/auth');
 
 var app = express();
 
